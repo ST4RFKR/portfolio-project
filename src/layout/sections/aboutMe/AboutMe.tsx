@@ -24,5 +24,6 @@ export function AboutMe() {
 }
 
 const StyledAboutMe = styled.section`
-
+    position: relative;
+    z-index: 1;
 `;

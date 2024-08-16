@@ -23,7 +23,9 @@ export function Contact() {
     );
 }
 
-const StyledContact = styled.section``;
+const StyledContact = styled.section`
+    position: relative;
+    z-index: 1;`;
 
 const Form = styled.form`
     display: flex;

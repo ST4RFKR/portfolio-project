@@ -25,4 +25,6 @@ export function Header(props: HeaderPropsType) {
 
 const StyledHeader = styled.header<HeaderPropsType>`
     background-color: ${Theme.colors.secondBg};
+    position: relative;
+    z-index: 1;
 `;

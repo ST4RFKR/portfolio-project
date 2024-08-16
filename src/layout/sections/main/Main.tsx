@@ -52,6 +52,7 @@ const Photo = styled.img`
     width: 457px;
     height: 431px;
     object-fit: cover;
+    z-index: 1;
 `;
 const StyledMainTitle = styled.h1`
     font-style: normal;

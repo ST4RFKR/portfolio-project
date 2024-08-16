@@ -41,7 +41,8 @@ export function Projects() {
 
 
 const StyledProjects = styled.section`
-
+    position: relative;
+    z-index: 1;
 `
 
 
