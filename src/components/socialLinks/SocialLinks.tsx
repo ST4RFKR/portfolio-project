@@ -30,15 +30,15 @@ export function SocialLinks(props: SocialLinksPropsType) {
     const {text} = props;
 
     return (
-            <StyledList>
-                {data.map((item) => (
-                    <ListItem
-                        key={item.title}
-                        isText={text}
-                        title={item.title}
-                        iconUrl={item.iconUrl}></ListItem>
-                ))}
-            </StyledList>
+        <StyledList>
+            {data.map((item) => (
+                <ListItem
+                    key={item.title}
+                    isText={text}
+                    title={item.title}
+                    iconUrl={item.iconUrl}></ListItem>
+            ))}
+        </StyledList>
     );
 }
 
@@ -48,6 +48,6 @@ const StyledList = styled.ul`
     justify-content: space-between;
 
     li + li {
-      margin-left: 22px;
-    } 
+        margin-left: 22px;
+    }
 `;

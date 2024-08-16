@@ -30,10 +30,10 @@ const StyledListItemText = styled.span`
     display: flex;
     justify-content: center;
     font-weight: bold;
-    background: ${Theme.colors.gradientText};
-    -webkit-background-clip: text; 
+    background: ${Theme.colors.gradient};
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text; 
+    background-clip: text;
     color: transparent;
 `
 

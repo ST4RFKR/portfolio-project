@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Container} from "../../components/container/Container.styled";
 import {SocialLinks} from "../../components/socialLinks/SocialLinks";
 import {FlexContainer} from "../../components/FlexContainer/FlexContainer";
+import {Theme} from "../../components/styles/Theme";
 
 export function Footer() {
     return (
@@ -17,6 +18,6 @@ export function Footer() {
 }
 
 const StyledFooter = styled.footer`
-
+background-color: ${Theme.colors.secondBg};
 `
 

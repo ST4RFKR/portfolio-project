@@ -5,9 +5,10 @@ import iconsSprite from '../../assets/img/svg-sprite.svg'
 type IconPropsType = {
     urlIcon: string,
     width?: string,
-    height?:string,
-    viewBox?:string
+    height?: string,
+    viewBox?: string
 }
+
 export function Icon(props: IconPropsType) {
     const {width, height, viewBox, urlIcon} = props
 

@@ -19,16 +19,19 @@ export function Menu(props: MenuPropsType) {
 }
 
 const StyledMenu = styled.nav<MenuPropsType>`
-  ul {
-    list-style: none;display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-  li + li {
-    margin-left: 60px;
-  }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    li + li {
+        margin-left: 60px;
+    }
 `;

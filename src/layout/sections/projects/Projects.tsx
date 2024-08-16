@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container.styled";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
-import {ProjectCard} from "../../../components/sectionSubTitle/ProjectCard";
+import {ProjectCard} from "../../../components/projectCard/ProjectCard";
 import CardImg from '../../../assets/img/projectImg.jpg'
 import {Theme} from "../../../components/styles/Theme";
 
@@ -25,7 +25,7 @@ const data = {
 export function Projects() {
     const {title, units} = data
 
-    const card = units.map(({title, description, imgUrl})=>
+    const CreateProjectCards = units.map(({title, description, imgUrl}) =>
         <ProjectCard key={title} title={title} description={description} imgUrl={imgUrl}/>
     )
 
@@ -33,7 +33,7 @@ export function Projects() {
         <StyledProjects>
             <Container>
                 <SectionTitle title={title}/>
-                {card}
+                {CreateProjectCards}
             </Container>
         </StyledProjects>
     );
@@ -41,7 +41,7 @@ export function Projects() {
 
 
 const StyledProjects = styled.section`
-    background-color: ${Theme.colors.secondBg};
+
 `
 
 

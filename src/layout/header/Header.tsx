@@ -5,6 +5,7 @@ import {Logo} from '../../components/logo/Logo';
 import {SocialLinks} from '../../components/socialLinks/SocialLinks';
 import {Container} from '../../components/container/Container.styled';
 import {FlexContainer} from "../../components/FlexContainer/FlexContainer";
+import {Theme} from "../../components/styles/Theme";
 
 type HeaderPropsType = {};
 
@@ -23,8 +24,5 @@ export function Header(props: HeaderPropsType) {
 }
 
 const StyledHeader = styled.header<HeaderPropsType>`
-    //display: flex;
-    //justify-content: space-between;
-    //align-items: center;
-    background-color: #0f1624;
+    background-color: ${Theme.colors.secondBg};
 `;

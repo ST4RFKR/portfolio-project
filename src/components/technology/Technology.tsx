@@ -4,8 +4,9 @@ import React from 'react';
 import {Icon} from "../icon/Icon";
 
 type TechnologyPropsType = {
-    urlIcon:string
+    urlIcon: string
 }
+
 export function Technology(props: TechnologyPropsType) {
     return (
         <StyledTechnology>
@@ -13,7 +14,6 @@ export function Technology(props: TechnologyPropsType) {
         </StyledTechnology>
     );
 }
-
 
 
 export const StyledTechnology = styled.div`
