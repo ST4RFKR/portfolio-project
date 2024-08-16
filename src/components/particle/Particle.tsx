@@ -24,114 +24,71 @@ export const Particle = () => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
+                background: {
+                    color: {
+                        value: "transparetn",
                     },
-                    "color": {
-                        "value": "#b9b9b9"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 5
-                        },
-                        "image": {
-                            "src": "img/github.svg",
-                            "width": 100,
-                            "height": 100
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 3.3,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 24.36231636904035,
-                            "size_min": 3.248308849205381,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ffffff",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 3,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 1420.4657549380909,
-                            "rotateY": 2288.528160733591
-                        }
-                    }
                 },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "repulse"
+                fpsLimit: 120,
+                interactivity: {
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "repulse",
                         },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
+                        onHover: {
+                            enable: true,
+                            mode: 'grab',
                         },
-                        "resize": true
                     },
-                    "modes": {
-                        "grab": {
-                            "distance": 400,
-                            "line_linked": {
-                                "opacity": 1
-                            }
+                    modes: {
+                        push: {
+                            distance: 200,
+                            duration: 15,
                         },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
+                        grab: {
+                            distance: 150,
                         },
-                        "repulse": {
-                            "distance": 200,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
-                    }
+                    },
                 },
-                "retina_detect": true
+                particles: {
+                    color: {
+                        value: "#FFFFFF",
+                    },
+                    links: {
+                        color: "#FFFFFF",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.3,
+                        width: 1,
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: true,
+                        speed: 1,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                        },
+                        value: 150,
+                    },
+                    opacity: {
+                        value: 1.0,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        value: { min: 1, max: 3 },
+                    },
+                },
+                detectRetina: true,
             }}
         />
     );

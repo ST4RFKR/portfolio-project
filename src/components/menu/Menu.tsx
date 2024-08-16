@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {LinkItem} from "../linkItem/LinkItem";
+import {Theme} from "../styles/Theme";
 
 
 type MenuPropsType = {};
@@ -27,8 +28,28 @@ const StyledMenu = styled.nav<MenuPropsType>`
     }
 
     a {
+        position: relative;
         text-decoration: none;
         color: #fff;
+        padding-bottom: 5px;
+        transition: all;
+        
+        
+        &::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, ${Theme.colors.mainText} -1.79%, rgba(255, 255, 255, 0) 90%);
+            transition: .6s;
+            opacity: 0;
+            
+        }
+        &:hover::after{
+            opacity: 1;
+        }
     }
 
     li + li {
