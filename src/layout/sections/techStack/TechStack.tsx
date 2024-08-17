@@ -39,7 +39,6 @@ export function TechStack() {
 }
 
 const StyledTechStack = styled.section`
-    padding: ${Theme.padding.main};
 
     h3 {
     }

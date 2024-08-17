@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import {Container} from '../../../components/container/Container.styled';
 import SectionTitle from '../../../components/sectionTitle/SectionTitle';
 import {Input} from '../../../components/input/Input';
-import {Button} from '../../../components/button/Button';
-import {Theme} from "../../../components/styles/Theme";
+import {Link} from '../../../components/button/Link';
+
 import {FlexContainer} from "../../../components/FlexContainer/FlexContainer";
 
 export function Contact() {
@@ -17,9 +17,9 @@ export function Contact() {
                         <Input placeholder={'Enter your name...'} title={'Name'}/>
                         <Input placeholder={'Enter your email...'} title={'Email'}/>
                         <Input placeholder={'Enter your message...'} title={'Message'}></Input>
-                        <Button as={'button'} type={'submit'}>
+                        <Link as={'button'} type={'submit'}>
                             Submit
-                        </Button>
+                        </Link>
                     </Form>
                 </FlexContainer>
 
@@ -32,7 +32,6 @@ export function Contact() {
 const StyledContact = styled.section`
     position: relative;
     z-index: 1;
-    padding: ${Theme.padding.main} 0;
 `;
 
 const Form = styled.form`

@@ -1,6 +1,6 @@
 import React from 'react';
 import {SectionSubTitle} from '../sectionSubTitle/SectionSubTitle';
-import {Button} from '../button/Button';
+import {Link} from '../button/Link';
 import styled from 'styled-components';
 import {Theme} from "../styles/Theme";
 
@@ -19,7 +19,7 @@ export function ProjectCard(props: ProjectCardPropsType) {
 
             <SectionSubTitle>{title}</SectionSubTitle>
             <p>{description}</p>
-            <Button>Look It Up</Button>
+            <Link>Look It Up</Link>
         </StyledCardProject>
     );
 }

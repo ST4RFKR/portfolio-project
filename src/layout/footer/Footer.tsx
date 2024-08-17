@@ -19,6 +19,5 @@ export function Footer() {
 
 const StyledFooter = styled.footer`
     background-color: ${Theme.colors.secondBg};
-    padding: ${Theme.margin.main} 0;
 `
 

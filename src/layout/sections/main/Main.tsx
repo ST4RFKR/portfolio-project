@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import mainPhoto from '../../../assets/img/header-img.webp';
 import {FlexContainer} from '../../../components/FlexContainer/FlexContainer';
 import {Container} from '../../../components/container/Container.styled';
-import {Button} from '../../../components/button/Button';
-import SectionTitle from "../../../components/sectionTitle/SectionTitle";
+import {Link} from '../../../components/button/Link';
+
 import {Theme} from "../../../components/styles/Theme";
 
 type MainPropsType = {};
@@ -20,7 +20,7 @@ export function Main(props: MainPropsType) {
                             <Name>Eugene</Name>
                         </h2>
                         <StyledMainTitle>I FRONTEND DEVELOPER</StyledMainTitle>
-                        <Button>Let’s Begin</Button>
+                        <Link>Let’s Begin</Link>
                     </Wrapper>
                     <Photo src={mainPhoto}/>
                 </FlexContainer>
@@ -29,7 +29,7 @@ export function Main(props: MainPropsType) {
     );
 }
 
-const StyledMain = styled.section`
+const StyledMain = styled.main`
  min-height: 100vh;
     display: flex;
     

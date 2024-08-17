@@ -6,6 +6,7 @@ import {FlexContainer} from '../../../components/FlexContainer/FlexContainer';
 import AboutImg from '../../../assets/img/second-photo.webp';
 import {Theme} from '../../../components/styles/Theme';
 
+
 export function AboutMe() {
     return (
         <StyledAboutMe>
@@ -26,7 +27,6 @@ export function AboutMe() {
 const StyledAboutMe = styled.section`
     position: relative;
     z-index: 1;
-    padding: ${Theme.padding.main} 0;
 `;
 
 const StyledAboutMeText = styled.p`
