@@ -16,7 +16,6 @@ export function Icon(props: IconPropsType) {
         <svg width={width || '38'}
              height={height || '38'}
              viewBox={viewBox || '0 0 38 38'}
-             fill="none"
              xmlns="http://www.w3.org/2000/svg">
             <use xlinkHref={`${iconsSprite}#${urlIcon}`}/>
         </svg>
