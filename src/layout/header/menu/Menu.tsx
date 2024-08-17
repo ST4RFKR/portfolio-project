@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {LinkItem} from "../linkItem/LinkItem";
-import {Theme} from "../styles/Theme";
+import {LinkItem} from "../../../components/linkItem/LinkItem";
+import {Theme} from "../../../components/styles/Theme";
 
 
 type MenuPropsType = {};
@@ -33,9 +33,9 @@ const StyledMenu = styled.nav<MenuPropsType>`
         color: #fff;
         padding-bottom: 5px;
         transition: all;
-        
-        
-        &::after{
+
+
+        &::after {
             position: absolute;
             content: '';
             width: 100%;
@@ -45,14 +45,19 @@ const StyledMenu = styled.nav<MenuPropsType>`
             background: linear-gradient(90deg, ${Theme.colors.mainText} -1.79%, rgba(255, 255, 255, 0) 90%);
             transition: .6s;
             opacity: 0;
-            
+
         }
-        &:hover::after{
+
+        &:hover::after {
             opacity: 1;
         }
     }
 
     li + li {
         margin-left: 60px;
+    }
+
+    @media ${Theme.media.table} {
+        display: none;
     }
 `;

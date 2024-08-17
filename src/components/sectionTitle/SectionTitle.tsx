@@ -16,5 +16,5 @@ const StyledSectionTitle = styled.h2`
     font-weight: 600;
     font-size: 46px;
     line-height: 69px;
-    margin-bottom:${Theme.margin.main};
+    margin-bottom: ${Theme.margin.main};
 `;

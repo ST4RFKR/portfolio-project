@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {ListItem} from "../listItem/ListItem";
+import {Theme} from "../styles/Theme";
 
 type SocialLinksPropsType = {
     text?: boolean,
@@ -50,4 +51,5 @@ const StyledList = styled.ul`
     li + li {
         margin-left: 22px;
     }
+    
 `;

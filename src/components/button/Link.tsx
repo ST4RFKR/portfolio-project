@@ -8,7 +8,5 @@ export const Link = styled.a`
     padding: 15px 50px;
     color: ${Theme.colors.mainText};
     transition: all .3s;
-    
-
 
 `

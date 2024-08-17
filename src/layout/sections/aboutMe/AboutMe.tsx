@@ -12,7 +12,7 @@ export function AboutMe() {
         <StyledAboutMe>
             <Container>
                 <SectionTitle title={'About Me'}/>
-                <FlexContainer justify={'spase-between'} >
+                <FlexContainer justify={'spase-between'}>
                     <StyledAboutMeText>
                         I’m passionate about frontend development, creating interactive and modern interfaces,
                         optimizing UX/UI, and implementing cutting-edge web technologies.

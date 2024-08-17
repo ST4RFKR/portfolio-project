@@ -43,14 +43,17 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
-    section{
+
+    section {
         padding: 100px 0;
     }
-    section:nth-of-type(odd){
+
+    section:nth-of-type(odd) {
         background-color: ${Theme.colors.mainBg};
 
     }
-    section:nth-of-type(even){
+
+    section:nth-of-type(even) {
         background-color: ${Theme.colors.secondBg};
     }
 

@@ -11,14 +11,12 @@ type ListItemPropsType = {
 }
 
 export function ListItem(props: ListItemPropsType) {
-    const {isText,iconUrl,title} = props;
+    const {isText, iconUrl, title} = props;
     return (
         <li>
             <a href="#">
-                {/*<FlexContainer justify={'center'} align={'center'} direction={'column'}>*/}
                 <Icon urlIcon={iconUrl}/>
                 {isText && <StyledListItemText>{title}</StyledListItemText>}
-                {/*</FlexContainer>*/}
 
             </a>
         </li>

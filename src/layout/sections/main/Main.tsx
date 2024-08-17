@@ -13,7 +13,7 @@ export function Main(props: MainPropsType) {
     return (
         <StyledMain>
             <Container>
-                <FlexContainer justify={'space-between'} align={'center'} >
+                <FlexContainer justify={'space-between'} align={'center'}>
                     <Wrapper>
                         <span>Hi 👋,</span>
                         <h2>My name is
@@ -30,10 +30,10 @@ export function Main(props: MainPropsType) {
 }
 
 const StyledMain = styled.main`
- min-height: 100vh;
+    min-height: 100vh;
     display: flex;
-    
-    span{
+
+    span {
 
         font-style: normal;
         font-weight: 600;
@@ -41,7 +41,8 @@ const StyledMain = styled.main`
         line-height: 50px;
 
     }
-    h2{
+
+    h2 {
         font-style: normal;
         font-weight: 600;
         font-size: 48px;
@@ -52,7 +53,7 @@ const Photo = styled.img`
     width: 457px;
     height: 431px;
     object-fit: cover;
-    z-index: 1;
+
 `;
 const StyledMainTitle = styled.h1`
     font-style: normal;
