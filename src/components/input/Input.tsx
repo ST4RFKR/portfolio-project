@@ -21,6 +21,7 @@ export function Input(props: InputPropsType) {
 const StyledInputBox = styled.div`
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
 `;
 const StyledLabel = styled.label`
     background: ${Theme.colors.gradient};
@@ -28,6 +29,7 @@ const StyledLabel = styled.label`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    margin-bottom: 5px;
 `;
 const StyledInput = styled.input`
     color: ${Theme.colors.mainText};

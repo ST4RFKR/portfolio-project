@@ -8,4 +8,10 @@ export const Theme = {
         gradient: 'linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%)',
     },
     fontSize: {},
+    margin: {
+        main: '40px',
+    },
+    padding: {
+        main: '20px',
+    }
 };

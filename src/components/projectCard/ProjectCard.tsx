@@ -2,6 +2,7 @@ import React from 'react';
 import {SectionSubTitle} from '../sectionSubTitle/SectionSubTitle';
 import {Button} from '../button/Button';
 import styled from 'styled-components';
+import {Theme} from "../styles/Theme";
 
 type ProjectCardPropsType = {
     imgUrl: string;
@@ -25,12 +26,13 @@ export function ProjectCard(props: ProjectCardPropsType) {
 
 const StyledCardProject = styled.article`
     max-width: 550px;
-    background: #0f1624;
-    border: 1px solid #a39d9d;
-    border-radius: 50px 0px;
+    background: ${Theme.colors.mainBg};
+    border: 2px solid #a39d9d;
+    border-radius: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 60px;
 
     img {
         padding: 25px 25px 40px 25px;

@@ -11,12 +11,12 @@ export function AboutMe() {
         <StyledAboutMe>
             <Container>
                 <SectionTitle title={'About Me'}/>
-                <FlexContainer>
-                    <p>
+                <FlexContainer justify={'spase-between'} >
+                    <StyledAboutMeText>
                         I’m passionate about frontend development, creating interactive and modern interfaces,
                         optimizing UX/UI, and implementing cutting-edge web technologies.
-                    </p>
-                    <img src={AboutImg} alt=""/>
+                    </StyledAboutMeText>
+                    <Photo src={AboutImg} alt=""/>
                 </FlexContainer>
             </Container>
         </StyledAboutMe>
@@ -26,4 +26,17 @@ export function AboutMe() {
 const StyledAboutMe = styled.section`
     position: relative;
     z-index: 1;
+    padding: ${Theme.padding.main} 0;
 `;
+
+const StyledAboutMeText = styled.p`
+
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    margin-top: ${Theme.margin.main};
+
+`
+const Photo = styled.img`
+
+`

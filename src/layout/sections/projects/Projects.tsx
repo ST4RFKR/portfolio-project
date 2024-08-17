@@ -5,6 +5,7 @@ import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {ProjectCard} from "../../../components/projectCard/ProjectCard";
 import CardImg from '../../../assets/img/projectImg.jpg'
 import {Theme} from "../../../components/styles/Theme";
+import {FlexContainer} from "../../../components/FlexContainer/FlexContainer";
 
 const data = {
     title: 'Projects',
@@ -16,6 +17,16 @@ const data = {
         },
         {
             title: 'Project 2',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            imgUrl: CardImg
+        },
+        {
+            title: 'Project 3',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            imgUrl: CardImg
+        },
+        {
+            title: 'Project 4',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             imgUrl: CardImg
         },
@@ -33,7 +44,9 @@ export function Projects() {
         <StyledProjects>
             <Container>
                 <SectionTitle title={title}/>
-                {CreateProjectCards}
+                <FlexContainer wrap={'wrap'} justify={'space-between'}>
+                    {CreateProjectCards}
+                </FlexContainer>
             </Container>
         </StyledProjects>
     );
@@ -43,6 +56,7 @@ export function Projects() {
 const StyledProjects = styled.section`
     position: relative;
     z-index: 1;
+    padding: ${Theme.padding.main} 0;
 `
 
 

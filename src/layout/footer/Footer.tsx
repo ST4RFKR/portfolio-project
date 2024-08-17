@@ -7,17 +7,18 @@ import {Theme} from "../../components/styles/Theme";
 
 export function Footer() {
     return (
-       <StyledFooter>
-           <Container>
-               <FlexContainer align={'center'} justify={'center'}>
-               <SocialLinks text></SocialLinks>
-               </FlexContainer>
-           </Container>
-       </StyledFooter>
+        <StyledFooter>
+            <Container>
+                <FlexContainer align={'center'} justify={'center'}>
+                    <SocialLinks text></SocialLinks>
+                </FlexContainer>
+            </Container>
+        </StyledFooter>
     );
 }
 
 const StyledFooter = styled.footer`
-background-color: ${Theme.colors.secondBg};
+    background-color: ${Theme.colors.secondBg};
+    padding: ${Theme.margin.main} 0;
 `
 

@@ -58,6 +58,7 @@ const StyledMainTitle = styled.h1`
     font-style: normal;
     font-weight: 700;
     font-size: 58px;
+    margin-bottom: ${Theme.margin.main}
 `
 const Name = styled.div`
     background: ${Theme.colors.gradient};

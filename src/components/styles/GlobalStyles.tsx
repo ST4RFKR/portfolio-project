@@ -45,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     section:nth-of-type(odd){
         background-color: ${Theme.colors.mainBg};
+
     }
     section:nth-of-type(even){
         background-color: ${Theme.colors.secondBg};
