@@ -33,7 +33,7 @@ const StyledMobileMenu = styled.nav`
     }
 
 
-    a {
+    ul li {
         position: relative;
         text-decoration: none;
         color: #fff;

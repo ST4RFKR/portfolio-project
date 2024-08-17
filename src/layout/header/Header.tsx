@@ -31,7 +31,7 @@ const StyledHeader = styled.header<HeaderPropsType>`
     background-color: ${Theme.colors.secondBg};
     padding: 15px 0;
     position: relative;
-    z-index: 1;
+    z-index: 1000;
 `;
 
 

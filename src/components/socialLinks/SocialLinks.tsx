@@ -43,7 +43,7 @@ export function SocialLinks(props: SocialLinksPropsType) {
     );
 }
 
-const StyledList = styled.ul`
+const StyledList = styled.ol`
     list-style: none;
     display: flex;
     justify-content: space-between;
