@@ -11,7 +11,7 @@ export function Technology(props: TechnologyPropsType) {
     return (
         <StyledTechnology>
             <Icon width={'112'} height={'110'} viewBox={'0 0 110 110'} urlIcon={props.urlIcon}/>
-        </StyledTechnology>
+         </StyledTechnology>
     );
 }
 
