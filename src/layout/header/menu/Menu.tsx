@@ -12,7 +12,7 @@ export function Menu(props: MenuPropsType) {
     <StyledMenu>
       <ul>
         {data.map((title) => (
-            <LinkItem title={title}/>
+            <LinkItem key={title} title={title}/>
         ))}
       </ul>
     </StyledMenu>
@@ -54,7 +54,9 @@ const StyledMenu = styled.nav<MenuPropsType>`
     }
 
     li + li {
-        margin-left: 60px;
+        margin-left: 45px;
+        
+
     }
 
     @media ${Theme.media.table} {

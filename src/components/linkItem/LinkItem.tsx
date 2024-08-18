@@ -16,4 +16,5 @@ export function LinkItem(props: LinkItemPropsType) {
 
 const StyledLinkItem = styled.li`
 
+    
 `

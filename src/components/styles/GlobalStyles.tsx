@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     :before {
         margin: 0;
         padding: 0;
-
+        box-sizing: border-box;
     }
 
     html {
@@ -46,6 +46,13 @@ export const GlobalStyle = createGlobalStyle`
 
     section {
         padding: 100px 0;
+        
+        @media ${Theme.media.table} {
+            padding: 50px 0;            
+        }
+        @media ${Theme.media.mobile} {
+            padding: 50px 0;
+        }
     }
 
     section:nth-of-type(odd) {

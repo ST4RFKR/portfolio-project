@@ -15,7 +15,7 @@ export function MobileMenu() {
         <MobileMenuWrapper isOpen={false}>
             <MobileWrapperList>
                 {data.map((title) => (
-                    <LinkItem title={title}/>
+                    <LinkItem key={title} title={title}/>
                 ))}
             </MobileWrapperList>
             <SocialLinks text></SocialLinks>

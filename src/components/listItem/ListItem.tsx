@@ -13,15 +13,19 @@ type ListItemPropsType = {
 export function ListItem(props: ListItemPropsType) {
     const {isText, iconUrl, title} = props;
     return (
-        <li>
+        <ItemStyle>
             <a href="#">
                 <Icon urlIcon={iconUrl}/>
                 {isText && <StyledListItemText>{title}</StyledListItemText>}
 
             </a>
-        </li>
+        </ItemStyle>
     );
 }
+
+const ItemStyle = styled.li`
+    
+`
 
 const StyledListItemText = styled.span`
     font-size: 10px;

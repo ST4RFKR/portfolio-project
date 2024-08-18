@@ -50,6 +50,8 @@ const StyledList = styled.ol`
 
     li + li {
         margin-left: 22px;
+        @media ${Theme.media.table} {
+                margin-left: 15px;
     }
     
 `;

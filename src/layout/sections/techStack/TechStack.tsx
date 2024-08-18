@@ -45,7 +45,7 @@ const StyledTechStack = styled.section`
     }
 `;
 const StyledTechStackSubTitle = styled.h3`
-    ${font({maxSize: 32, minSize: 26, lineHeight: '26px'})}
+    ${font({maxSize: 32, minSize: 14, lineHeight: '26px'})}
     margin-bottom: ${Theme.margin.main};
 `;
 const StyledGridContainer = styled.div`

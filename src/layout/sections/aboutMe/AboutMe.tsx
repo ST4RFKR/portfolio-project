@@ -13,7 +13,8 @@ export function AboutMe() {
         <StyledAboutMe>
             <Container>
                 <SectionTitle title={'About Me'}/>
-                <FlexContainer justify={'spase-between'}>
+                <FlexContainer justify={'spase-between'} wrap={'wrap'}
+                align={'center'}>
                     <StyledAboutMeText>
                         I’m passionate about frontend development, creating interactive and modern interfaces,
                         optimizing UX/UI, and implementing cutting-edge web technologies.
@@ -31,18 +32,21 @@ const StyledAboutMe = styled.section`
 `;
 
 const StyledAboutMeText = styled.p`
-    ${font({weight:600,maxSize: 32, minSize: 20, lineHeight: '48px'})}
+    align-self: flex-start;
+    max-width: 758px;
+    width: 100%;
+    ${font({weight: 600, maxSize: 32, minSize: 20, lineHeight: '40px'})}
     margin-bottom: ${Theme.margin.main};
     margin-top: ${Theme.margin.main};
 
 `
 const Photo = styled.img`
-    width: 344px;
-    height: 521px;
+    width: 339px;
+    height: 507px;
     object-fit: cover;
+    margin: 0 auto;
     
     @media ${Theme.media.table} {
-        width: calc(344px - (344px / 3));
-        height: calc(521px - (521px / 3));
+        align-self: center;
     }
 `

@@ -14,7 +14,7 @@ export function Main(props: MainPropsType) {
     return (
         <StyledMain>
             <Container>
-                <FlexContainer justify={'space-between'} align={'center'}>
+                <FlexContainer justify={'space-between'} align={'center'} wrap={'wrap'}>
                     <Wrapper>
                         <span>Hi 👋,</span>
                         <h2>My name is
@@ -48,6 +48,7 @@ const Photo = styled.img`
     width: 457px;
     height: 431px;
     object-fit: cover;
+    margin: 0 auto;
     @media ${Theme.media.table} {
         width: calc(457px - (457px / 3));
         height: calc(431px - (431px / 3));
@@ -69,6 +70,7 @@ const Name = styled.div`
 `
 
 const Wrapper = styled.div`
-
+    margin: 0 auto;
+    padding: 40px;
     
 `

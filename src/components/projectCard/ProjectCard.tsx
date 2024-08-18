@@ -17,7 +17,6 @@ export function ProjectCard(props: ProjectCardPropsType) {
     return (
         <StyledCardProject>
             <img src={imgUrl} alt=""/>
-
             <SectionSubTitle>{title}</SectionSubTitle>
             <p>{description}</p>
             <Link>Look It Up</Link>
@@ -26,17 +25,17 @@ export function ProjectCard(props: ProjectCardPropsType) {
 }
 
 const StyledCardProject = styled.article`
-    max-width: 550px;
+    width: 550px;
     background: ${Theme.colors.mainBg};
     border: 2px solid #a39d9d;
     border-radius: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
     
     @media ${Theme.media.table} {
-        max-width:calc(550px - (550px / 3));
+        width: 350px;
     }
 
     img {
@@ -46,8 +45,8 @@ const StyledCardProject = styled.article`
         padding: 25px 25px 40px 25px;
         
         @media ${Theme.media.table} {
-            width: calc(500px - (500px / 3));
-            height: calc(280px - (280px / 3));
+            width: 318px;
+            height: 188px;
             
         }
     }
