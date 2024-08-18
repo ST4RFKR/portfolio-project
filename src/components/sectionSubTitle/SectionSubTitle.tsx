@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import {Theme} from '../../components/styles/Theme';
+import {font} from "../styles/Common";
 
 export const SectionSubTitle = styled.h3`
-    font-weight: 600;
-    font-size: 30px;
+    ${font({weight: 600, maxSize: 30, minSize: 20, })}
     line-height: 88.5%;
     position: relative;
     padding-bottom: 20px;

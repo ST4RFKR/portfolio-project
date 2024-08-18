@@ -5,6 +5,7 @@ import {SectionTitle} from '../../../components/sectionTitle/SectionTitle';
 import {FlexContainer} from '../../../components/FlexContainer/FlexContainer';
 import AboutImg from '../../../assets/img/second-photo.webp';
 import {Theme} from '../../../components/styles/Theme';
+import {font} from "../../../components/styles/Common";
 
 
 export function AboutMe() {
@@ -30,13 +31,18 @@ const StyledAboutMe = styled.section`
 `;
 
 const StyledAboutMeText = styled.p`
-
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
+    ${font({weight:600,maxSize: 32, minSize: 20, lineHeight: '48px'})}
+    margin-bottom: ${Theme.margin.main};
     margin-top: ${Theme.margin.main};
 
 `
 const Photo = styled.img`
-
+    width: 344px;
+    height: 521px;
+    object-fit: cover;
+    
+    @media ${Theme.media.table} {
+        width: calc(344px - (344px / 3));
+        height: calc(521px - (521px / 3));
+    }
 `

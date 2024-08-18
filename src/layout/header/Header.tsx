@@ -16,11 +16,12 @@ export function Header(props: HeaderPropsType) {
     return (
         <StyledHeader>
             <Container>
-                <FlexContainer align={'center'} justify={'space-between'}>
-                    <Logo/>
-                    <Menu/>
+                <FlexContainer align={'center'} justify={'space-between'} wrap={'wrap'}>
+                        <Logo/>
+                        <Menu/>
+                        <SocialLinks/>
                     <MobileMenu/>
-                    <SocialLinks/>
+
                 </FlexContainer>
             </Container>
         </StyledHeader>

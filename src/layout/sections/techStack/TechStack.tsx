@@ -5,6 +5,7 @@ import {Theme} from '../../../components/styles/Theme';
 import {SectionTitle} from '../../../components/sectionTitle/SectionTitle';
 import {Technology} from '../../../components/technology/Technology';
 import {FlexContainer} from "../../../components/FlexContainer/FlexContainer";
+import {font} from "../../../components/styles/Common";
 
 
 const data = {
@@ -44,9 +45,7 @@ const StyledTechStack = styled.section`
     }
 `;
 const StyledTechStackSubTitle = styled.h3`
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 26px;
+    ${font({maxSize: 32, minSize: 26, lineHeight: '26px'})}
     margin-bottom: ${Theme.margin.main};
 `;
 const StyledGridContainer = styled.div`
@@ -57,4 +56,19 @@ const StyledGridContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: ${Theme.margin.main};
+    
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 50px;
+        & > *:nth-child(10) {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+    }
+    @media ${Theme.media.mobile} {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 30px;
+    }    
+
 `

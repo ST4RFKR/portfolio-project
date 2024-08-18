@@ -6,6 +6,7 @@ import {Container} from '../../../components/container/Container.styled';
 import {Link} from '../../../components/button/Link';
 
 import {Theme} from "../../../components/styles/Theme";
+import {font} from "../../../components/styles/Common";
 
 type MainPropsType = {};
 
@@ -34,31 +35,28 @@ const StyledMain = styled.main`
     display: flex;
 
     span {
+        ${font({weight: 600, maxSize: 48, minSize: 40, lineHeight: '50px'})}
 
-        font-style: normal;
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 50px;
 
     }
 
     h2 {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 50px;
+        ${font({weight: 600, maxSize: 48, minSize: 38, lineHeight: '50px'})}
     }
 `;
 const Photo = styled.img`
     width: 457px;
     height: 431px;
     object-fit: cover;
+    @media ${Theme.media.table} {
+        width: calc(457px - (457px / 3));
+        height: calc(431px - (431px / 3));
+
+    }
 
 `;
 const StyledMainTitle = styled.h1`
-    font-style: normal;
-    font-weight: 700;
-    font-size: 58px;
+    ${font({weight: 700, maxSize: 52, minSize: 38, lineHeight: '50px'})}
     margin-bottom: ${Theme.margin.main}
 `
 const Name = styled.div`
@@ -70,4 +68,7 @@ const Name = styled.div`
     padding: 10px 0;
 `
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+
+    
+`

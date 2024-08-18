@@ -11,8 +11,8 @@ const data = ['Projects', 'Tech Stack','About me','Contact']
 export function MobileMenu() {
   return (
     <StyledMobileMenu >
-        <BurgerButton isOpen={true}><span></span></BurgerButton>
-        <MobileMenuWrapper isOpen={true}>
+        <BurgerButton isOpen={false}><span></span></BurgerButton>
+        <MobileMenuWrapper isOpen={false}>
             <MobileWrapperList>
                 {data.map((title) => (
                     <LinkItem title={title}/>
@@ -66,7 +66,7 @@ const StyledMobileMenu = styled.nav`
 const BurgerButton = styled.button<{isOpen:boolean}>`
 
     position: fixed;
-    top: -100px;
+    top: -111px;
     right: -100px;
     width: 200px;
     height: 200px;

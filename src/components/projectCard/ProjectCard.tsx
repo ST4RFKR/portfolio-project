@@ -3,6 +3,7 @@ import {SectionSubTitle} from '../sectionSubTitle/SectionSubTitle';
 import {Link} from '../button/Link';
 import styled from 'styled-components';
 import {Theme} from "../styles/Theme";
+import {font} from "../styles/Common";
 
 type ProjectCardPropsType = {
     imgUrl: string;
@@ -33,15 +34,26 @@ const StyledCardProject = styled.article`
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
+    
+    @media ${Theme.media.table} {
+        max-width:calc(550px - (550px / 3));
+    }
 
     img {
+        width: 500px;
+        height: 280px;
+        object-fit: cover;
         padding: 25px 25px 40px 25px;
+        
+        @media ${Theme.media.table} {
+            width: calc(500px - (500px / 3));
+            height: calc(280px - (280px / 3));
+            
+        }
     }
 
     p {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 27px;
+        ${font({weight: 500, maxSize: 18, minSize: 14, lineHeight: '27px'})}
         padding: 0 25px;
         margin-bottom: 50px;
     }
