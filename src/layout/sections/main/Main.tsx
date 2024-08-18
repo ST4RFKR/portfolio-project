@@ -71,6 +71,5 @@ const Name = styled.div`
 
 const Wrapper = styled.div`
     margin: 0 auto;
-    padding: 40px;
     
 `
