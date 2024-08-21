@@ -22,7 +22,7 @@ export function TechStack() {
     ));
 
     return (
-        <StyledTechStack>
+        <StyledTechStack id={'tech_stack'}>
             <Container>
                 <FlexContainer direction={'column'} align={'center'}>
                     <SectionTitle title={title}/>

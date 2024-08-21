@@ -10,7 +10,7 @@ import {font} from "../../../components/styles/Common";
 
 export function AboutMe() {
     return (
-        <StyledAboutMe>
+        <StyledAboutMe id={'about_me'}>
             <Container>
                 <SectionTitle title={'About Me'}/>
                 <FlexContainer justify={'spase-between'} wrap={'wrap'}
@@ -19,7 +19,7 @@ export function AboutMe() {
                         I’m passionate about frontend development, creating interactive and modern interfaces,
                         optimizing UX/UI, and implementing cutting-edge web technologies.
                     </StyledAboutMeText>
-                    <Photo src={AboutImg} alt=""/>
+                    <Photo src={AboutImg} alt="AboutPhoto"/>
                 </FlexContainer>
             </Container>
         </StyledAboutMe>
@@ -35,7 +35,7 @@ const StyledAboutMeText = styled.p`
     align-self: flex-start;
     max-width: 758px;
     width: 100%;
-    ${font({weight: 600, maxSize: 32, minSize: 20, lineHeight: '40px'})}
+    ${font({weight: 600, maxSize: 32, minSize: 14, lineHeight: '40px'})}
     margin-bottom: ${Theme.margin.main};
     margin-top: ${Theme.margin.main};
 

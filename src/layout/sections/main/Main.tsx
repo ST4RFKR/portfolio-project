@@ -7,6 +7,8 @@ import {Link} from '../../../components/button/Link';
 
 import {Theme} from "../../../components/styles/Theme";
 import {font} from "../../../components/styles/Common";
+import Typewriter from 'typewriter-effect';
+
 
 type MainPropsType = {};
 
@@ -18,12 +20,27 @@ export function Main(props: MainPropsType) {
                     <Wrapper>
                         <span>Hi 👋,</span>
                         <h2>My name is
-                            <Name>Eugene</Name>
+                            <Name>Eugene.</Name>
                         </h2>
-                        <StyledMainTitle>I FRONTEND DEVELOPER</StyledMainTitle>
+
+                        <StyledMainTitle>
+                            <p>I FRONTEND DEVELOPER</p>
+                            <Typewriter
+                                options={{
+                                    strings: ['A FRONT-END DEVELOPER'],
+                                    autoStart: true,
+                                    delay: 200,
+                                    loop: true,
+                                    cursor:'/'
+
+
+                                }}
+                            />
+
+                        </StyledMainTitle>
                         <Link>Let’s Begin</Link>
                     </Wrapper>
-                    <Photo src={mainPhoto}/>
+                    <Photo src={mainPhoto} alt={'mainPhoto'}/>
                 </FlexContainer>
             </Container>
         </StyledMain>
@@ -33,6 +50,9 @@ export function Main(props: MainPropsType) {
 const StyledMain = styled.main`
     min-height: 100vh;
     display: flex;
+    p{
+        display: none;
+    }
 
     span {
         ${font({weight: 600, maxSize: 48, minSize: 40, lineHeight: '50px'})}
@@ -44,6 +64,12 @@ const StyledMain = styled.main`
         ${font({weight: 600, maxSize: 48, minSize: 38, lineHeight: '50px'})}
     }
 `;
+const Wrapper = styled.div`
+    max-width: 681px;
+    width: 100%;
+    margin: 0 auto;
+    
+`
 const Photo = styled.img`
     width: 457px;
     height: 431px;
@@ -67,9 +93,10 @@ const Name = styled.div`
     background-clip: text;
     color: transparent;
     padding: 10px 0;
+    .Typewriter__cursor{
+        font-size: 40px;
+        color: ${Theme.colors.mainText}
+    }
 `
 
-const Wrapper = styled.div`
-    margin: 0 auto;
-    
-`
+

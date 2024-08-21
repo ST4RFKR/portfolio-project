@@ -6,17 +6,34 @@ import {Theme} from "../../../components/styles/Theme";
 
 type MenuPropsType = {};
 
-const data = ['Projects', 'Tech Stack','About me','Contact']
+// const data = ['Projects', 'Tech Stack','About me','Contact']
+const data = [{
+    title: 'Projects',
+    id: 'projects'
+},
+    {
+        title: 'Tech Stack',
+        id: 'tech_stack'
+    },
+    {
+        title: 'About me',
+        id: 'about_me'
+    },
+    {
+        title: 'Contact',
+        id: 'contact'
+    }]
+
 export function Menu(props: MenuPropsType) {
-  return (
-    <StyledMenu>
-      <ul>
-        {data.map((title) => (
-            <LinkItem key={title} title={title}/>
-        ))}
-      </ul>
-    </StyledMenu>
-  );
+    return (
+        <StyledMenu>
+            <ul>
+                {data.map((item) => (
+                    <LinkItem key={item.title} title={item.title} url={item.id}/>
+                ))}
+            </ul>
+        </StyledMenu>
+    );
 }
 
 const StyledMenu = styled.nav<MenuPropsType>`
@@ -55,7 +72,7 @@ const StyledMenu = styled.nav<MenuPropsType>`
 
     li + li {
         margin-left: 45px;
-        
+
 
     }
 

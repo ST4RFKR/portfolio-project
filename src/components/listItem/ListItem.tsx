@@ -6,15 +6,16 @@ import {Theme} from "../styles/Theme";
 
 type ListItemPropsType = {
     isText?: boolean,
-    iconUrl: string
-    title?: string
+    iconUrl: string,
+    title?: string,
+    url?: string,
 }
 
 export function ListItem(props: ListItemPropsType) {
-    const {isText, iconUrl, title} = props;
+    const {isText, iconUrl, title, url} = props;
     return (
         <ItemStyle>
-            <a href="#">
+            <a href={url} target={'_blank'}>
                 <Icon urlIcon={iconUrl}/>
                 {isText && <StyledListItemText>{title}</StyledListItemText>}
 

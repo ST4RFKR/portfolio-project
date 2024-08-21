@@ -41,7 +41,7 @@ export function Projects() {
     )
 
     return (
-        <StyledProjects>
+        <StyledProjects id={'projects'}>
             <Container>
                 <SectionTitle title={title}/>
                 <FlexContainer wrap={'wrap'} justify={'space-between'}>

@@ -9,19 +9,24 @@ type SocialLinksPropsType = {
 const data = [
     {
         title: 'GMAIL',
-        iconUrl: 'gmail'
+        iconUrl: 'gmail',
+        url: 'https://gmail.com'
     },
     {
         title: 'GIT',
-        iconUrl: 'git'
+        iconUrl: 'git',
+        url: 'https://github.com/'
+
     },
     {
         title: 'LINKEDIN',
-        iconUrl: 'linked'
+        iconUrl: 'linked',
+        url: 'https://www.linkedin.com/'
     },
     {
         title: 'TG',
-        iconUrl: 'tg'
+        iconUrl: 'tg',
+        url: 'https://web.telegram.org/'
     },
 
 ]
@@ -37,6 +42,7 @@ export function SocialLinks(props: SocialLinksPropsType) {
                     key={item.title}
                     isText={text}
                     title={item.title}
+                    url={item.url}
                     iconUrl={item.iconUrl}></ListItem>
             ))}
         </StyledList>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
 import {LinkItem} from "../../../components/linkItem/LinkItem";
 import {Theme} from "../../../components/styles/Theme";
@@ -7,15 +7,35 @@ import {SocialLinks} from "../../../components/socialLinks/SocialLinks";
 
 
 
-const data = ['Projects', 'Tech Stack','About me','Contact']
+// const data = ['Projects', 'Tech Stack','About me','Contact']
+const data = [{
+    title:'Projects',
+    id: 'projects'
+},
+    {
+        title:'Tech Stack',
+        id: 'tech_stack'
+    },
+    {
+        title:'About me',
+        id: 'about_me'
+    },
+    {
+        title:'Contact',
+        id: 'contact'
+    }]
 export function MobileMenu() {
+   const [menuIsOpen, setMenuIsOpen] = useState(false)
+    function onBurgerButtonClick () {
+       setMenuIsOpen(!menuIsOpen)
+    }
   return (
     <StyledMobileMenu >
-        <BurgerButton isOpen={false}><span></span></BurgerButton>
-        <MobileMenuWrapper isOpen={false}>
-            <MobileWrapperList>
-                {data.map((title) => (
-                    <LinkItem key={title} title={title}/>
+        <BurgerButton onClick={onBurgerButtonClick} isOpen={menuIsOpen}><span></span></BurgerButton>
+        <MobileMenuWrapper onClick={() => {setMenuIsOpen(false)}}  isOpen={menuIsOpen}>
+            <MobileWrapperList >
+                {data.map((item) => (
+                    <LinkItem url={item.id} key={item.title} title={item.title}/>
                 ))}
             </MobileWrapperList>
             <SocialLinks text></SocialLinks>

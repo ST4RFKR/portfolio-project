@@ -9,7 +9,7 @@ import {FlexContainer} from "../../../components/FlexContainer/FlexContainer";
 
 export function Contact() {
     return (
-        <StyledContact>
+        <StyledContact id={'contact'}>
             <Container>
                 <FlexContainer direction={'column'} align={'center'}>
                     <SectionTitle title={'Contact'}></SectionTitle>
