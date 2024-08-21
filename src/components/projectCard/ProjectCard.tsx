@@ -26,14 +26,21 @@ export function ProjectCard(props: ProjectCardPropsType) {
 
 const StyledCardProject = styled.article`
     width: 550px;
-    background: ${Theme.colors.mainBg};
+    background: ${Theme.colors.secondBg};
     border: 2px solid #a39d9d;
     border-radius: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto 60px;
-    
+    transition: all .3s;
+
+    :hover {
+        transform: translateY(-10px);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }
+
     @media ${Theme.media.table} {
         width: 350px;
     }
@@ -43,11 +50,11 @@ const StyledCardProject = styled.article`
         height: 280px;
         object-fit: cover;
         padding: 25px 25px 40px 25px;
-        
+
         @media ${Theme.media.table} {
             width: 318px;
             height: 188px;
-            
+
         }
     }
 
