@@ -2,18 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import {Theme} from '../styles/Theme';
 
+
 type InputPropsType = {
     title: string;
     placeholder: string;
+    name:string
 
 };
 
 export function Input(props: InputPropsType) {
-    const {title, placeholder,} = props;
+    const {title, placeholder,name} = props;
     return (
         <StyledInputBox>
             <StyledLabel htmlFor={title.toLowerCase()}>{title}</StyledLabel>
-            <StyledInput placeholder={placeholder}></StyledInput>
+            <StyledInput name={name} placeholder={placeholder}></StyledInput>
         </StyledInputBox>
     );
 }
