@@ -7,6 +7,9 @@ import {Link} from '../../../components/button/Link';
 
 import {FlexContainer} from "../../../components/FlexContainer/FlexContainer";
 import emailjs from '@emailjs/browser';
+import {Theme} from "../../../components/styles/Theme";
+
+
 
 export function Contact() {
     const [message, setMessage] = useState<string | null>(null);
@@ -25,14 +28,14 @@ export function Contact() {
             .then(
                 () => {
                     setMessage('Форма успешно отправлена!');
-                    setTimeout(() => {setMessage(null)},3000)
+                    setTimeout(() => {setMessage(null)},1500)
                     setError(null);
                     e.target.reset();
                 },
                 (error) => {
                     setMessage(null);
                     setError('Произлошла ошибка при отравки формы.');
-                    setTimeout(() => {setError(null)},3000)
+                    setTimeout(() => {setError(null)},1500)
                     e.target.reset();
                 },
             );
@@ -49,11 +52,14 @@ export function Contact() {
                         <Input placeholder={'Enter your email...'} title={'Email'} name="user_email"/>
                         <Input placeholder={'Enter your message...'} title={'Message'} name="message"></Input>
                         <Link as={'button'} type={'submit'}>
-                            Submit
+                            {message ? <SuccessMessage>
+
+                                <MessageContent>{message}</MessageContent>
+                            </SuccessMessage> : 'Submit'}
                         </Link>
                     </Form>
-                    {message && <SuccessMessage>{message}</SuccessMessage>}
-                    {message && <ErrorMessage>{error}</ErrorMessage>}
+
+                    {error && <ErrorMessage>{error}</ErrorMessage>}
                 </FlexContainer>
 
             </Container>
@@ -73,10 +79,28 @@ const Form = styled.form`
     max-width: 400px;
     margin: 0 auto;
 `;
-const SuccessMessage = styled.p`
-    color: green;
-    margin-top: 20px;
+const SuccessMessage = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 `;
+const MessageContent = styled.div`
+    color: ${Theme.colors.mainText}
+    padding-left: 22px;
+    position: relative;
+ 
+    &::after{
+     position: absolute;
+     content: '✅';
+     top: -1px;
+     left: -10px;
+     transform: translateX(-50%);
+     width: 20px;
+     height: 20px;
+ }
+`
 
 const ErrorMessage = styled.p`
     color: red;

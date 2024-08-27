@@ -222,4 +222,10 @@
                 <rect width="30" height="30" rx="15" fill="white"/>
             </clipPath>
         </defs></g>
+
+    <!-- Check icon -->
+    <g id="check">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24"><path fill="white" d="M22.903 2.828 20.075 0 6.641 13.435 3.102 9.09 0 11.616l6.338 7.779L22.903 2.828z"/></svg>
+    </g>
+
 </svg>
